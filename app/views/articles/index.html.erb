@@ -1,1 +1,6 @@
-<h1>Hello Dani!</h1>
+<h1>Articles Page</h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= article.title %></li>
+  <% end %>
+</ul>
