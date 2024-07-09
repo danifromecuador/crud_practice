@@ -40,6 +40,13 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # this method destoy or delete a given article
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to root_path, status: :see_other
+  end
+
   private
 
   # manages the params obtained from the new form
