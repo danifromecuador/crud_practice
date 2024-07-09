@@ -1,0 +1,16 @@
+<h1>Show article</h1>
+
+<ul>
+  <li>ID: <%= @article.id%></li>
+  <li>Title: <%= @article.title%></li>
+  <li>Body: <%= @article.body%></li>
+</ul>
+
+<%= link_to "return", "/articles" %>
+<%= link_to "edit", "/articles/#{@article.id}/edit" %> <%# link_to "Edit", edit_article_path(@article) %> 
+<%= link_to "delete", "/articles/#{@article.id}", # link_to "delete", article_path(@article)
+  data:{
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  }
+%>

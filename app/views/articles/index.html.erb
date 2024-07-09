@@ -1,1 +1,9 @@
-<h1>Hello Dani!</h1>
+<h1>Articles Index</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article %></li>
+  <% end %>
+</ul>
+
+<%= link_to "new", "/articles/new" %>
