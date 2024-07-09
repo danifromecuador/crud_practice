@@ -6,4 +6,5 @@
   <li>Body: <%= @article.body%></li>
 </ul>
 
-<%= link_to "return index", "/articles" %>
+<%= link_to "return", "/articles" %>
+<%= link_to "edit", "/articles/#{@article.id}/edit" %>
